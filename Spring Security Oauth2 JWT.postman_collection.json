@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "cbf54454-dffa-4dc5-aa85-a2f361b76504",
+		"name": "Spring Security Oauth2 JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJsYXN0TmFtZSI6IlVzZXIiLCJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJuYW1lIjoiQWRtaW4iLCJleHAiOjE2MDQ2MzE2MzcsImluZm9fYWRkaXRpb25hbCI6IkhpIGhvdyBhcmUgeW91ITogYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjUyMzNhMWRhLTc5NjMtNDc4Ny05MDBjLWFiMTdhZDI1YjVlZiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiY2xpZW50X2lkIjoiYW5ndWxhcl9hcHAifQ.C6k_zLWqmvdVOtdF4ZhDzZExqEWZ0A1IhM1ELEhf_EA1w5gBRHpja7BIfyJy2SarMjcl5LUyg4LvBZTf3Cd_f83gybA4PvMsHBEj4Omc2w_5G4o6RkrwFZjYwwXlYl5sYqUFDtiPVhEJriyUlM1fRnCXTA17DXuCon2FW5dCIoPR2JMXfnYgE7rwLnF-VfV-X-VwLuAdmOob23Wt8vfbyK_ZXW0OPvqOjaP05zQAc96BvMgnnEOV8pzuZg7deGI3srRsyORYdJ1i1Lncey8XNs82Lzw4MQwtwO1R7u1zxE-GH-809CipIvFxVRO0I51WfoqYEUJUbRzE70VacuvPYA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clients/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clients",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Oauth Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "angular_app",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJsYXN0TmFtZSI6IlVzZXIiLCJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJuYW1lIjoiQWRtaW4iLCJleHAiOjE2MDQ2MzQwOTgsImluZm9fYWRkaXRpb25hbCI6IkhpIGhvdyBhcmUgeW91ITogYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImFiYTUxYjA0LTRmYjMtNDhlYi1hZDBiLWMwNDkzNmY3NWVlNCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiY2xpZW50X2lkIjoiYW5ndWxhcl9hcHAifQ.ReV3gfo3kj8qvLxc99zIScizV0SWPDFgLU2e-3ptSEoHPdBVHMo8hKn0kAKvGwGFaoFjXYAfHlqepHmqJpxgJh8ZDHdugGDGecuhqUtoSzj09xaVTL1UUsuj_P5eHDF-PX-ae5WG-0AueZmNuB9yKZeFd-VWDTLxrV0Wan0JLrGP104ARv7BgFmgN5uhGcEZlJ2u3ihsJCbx1ie3jWhxxxBHelPDXf4bhfYkaAYgbiMPAoNFHLrwrMuzy2K1Otae8Cz8nnGR_8wtrpzjF5uxlKw3m6QtlGXX9Cp7KXtmO0FD8PpU1hgOqhPi1lzZ240hbdKKbJp4ipNMre0Y7DPbgA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "multipartFile",
+							"type": "file",
+							"src": "/C:/Users/dawnt/OneDrive/Desktop/2.JPG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
